@@ -1,4 +1,5 @@
 
+
 // ============================================================
 // Lab: More Details about Classes
 // Course: Object-Oriented Programming (C++)
@@ -8,12 +9,20 @@
 
  
 
+ 
+
+ 
+
 #include <iostream>
 #include <string>
 #include <cmath>
 // ============================================================
 // CLASS DEFINITIONS
 // ============================================================
+
+ 
+
+ 
 
  
 
@@ -27,8 +36,16 @@ public:
 
  
 
+ 
+
+ 
+
     // TODO 2: const getter for x
     double getX() const { return x; }   // stub — add const
+
+ 
+
+ 
 
  
 
@@ -37,14 +54,28 @@ public:
 
  
 
+ 
+
+ 
+
     // TODO 4: const display()
     void display() const { std::cout << "(" << x << "," << y << ")";}
+
+ 
+
+ 
 
  
 
     // TODO 5: declare Rectangle as friend class
      friend class Rectangle;
 };
+
+ 
+
+ 
+
+ 
 
  
 
@@ -61,8 +92,16 @@ public:
 
  
 
+ 
+
+ 
+
     // TODO 7: const getWidth()
      double getWidth() const { return std::abs(bottomRight.x - topLeft.x); }  // stub
+
+ 
+
+ 
 
  
 
@@ -72,11 +111,17 @@ public:
 
  
 
+ 
+
+ 
+
     // TODO 9: const getArea()
     double getArea() const { return   getWidth() * getHeight() ; }  
     // stub
     // TODO 10: const display()
     void display() const {
+
+ 
 
         std::cout << "Rectangle[";
         topLeft.display();
@@ -84,12 +129,24 @@ public:
         bottomRight.display();
         std::cout << "]";
 
+ 
+
     }
+
+ 
+
+ 
 
  
 
    friend bool isSameSize(const Rectangle& r1, const Rectangle& r2);// TODO 11: declare isSameSize as friend function
 };
+
+ 
+
+ 
+
+ 
 
  
 
@@ -104,6 +161,12 @@ bool isSameSize(const Rectangle& r1, const Rectangle& r2) {
 
  
 
+ 
+
+ 
+
+ 
+
 class ConstDemo {
 private:
     int value;
@@ -113,8 +176,16 @@ public:
 
  
 
+ 
+
+ 
+
     // TODO 14: const getValue()
    int getValue() const { return value; }  // stub — add const
+
+ 
+
+ 
 
  
 
@@ -123,9 +194,19 @@ public:
 
  
 
+ 
+
+ 
+
     // TODO 16: const constGetDouble() — returns value * 2 without modifying
    int constGetDouble() const { return value * 2; }  // stub — add const + fix body
 };
+
+ 
+
+ 
+
+ 
 
  
 
@@ -139,4 +220,6 @@ int main() {
     std::cout << "Complete the TODOs above!" << std::endl;
     return 0;
 }
+
+ 
 
